@@ -22,6 +22,10 @@ const PropertySchema = new mongoose.Schema({
     type: [String],
     required: true,
   },
+  fileName: {
+    type: String,
+    required: true,
+  },
 });
 
 const Property = mongoose.model("Property", PropertySchema);

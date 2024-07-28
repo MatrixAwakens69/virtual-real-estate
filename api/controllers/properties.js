@@ -22,7 +22,14 @@ export const getProperties = async (req, res) => {
 
 export const updateProperty = async (req, res) => {
   const updates = Object.keys(req.body);
-  const allowedUpdates = ["name", "description", "price", "location", "images"];
+  const allowedUpdates = [
+    "name",
+    "description",
+    "price",
+    "location",
+    "images",
+    "url",
+  ];
   const isValidOperation = updates.every((update) =>
     allowedUpdates.includes(update)
   );
